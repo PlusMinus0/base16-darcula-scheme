@@ -8,8 +8,8 @@ current_height = 0
 padding_left = 0
 padding_right = 20
 box_width = 60
-font_ = ImageFont.truetype("DejaVuSans.ttf", size=15)
-font_size_ = font_.getsize('base0F')
+font_ = ImageFont.truetype("DejaVuSansMono.ttf", size=15)
+font_size_ = font_.getsize('#FFFFFF - base0F')
 text_offset = (line_height - font_size_[1]) / 2
 
 img_height_ = 16 * line_height
@@ -35,7 +35,7 @@ for k, v in scheme.items():
 	y1 = y0 + line_height
 	draw.rectangle([x0, y0, x1, y1], fill=fill_)
 	
-	draw.text((x1+padding_right, y0+text_offset), k, fill='black', font=font_)
+	draw.text((x1+padding_right, y0+text_offset), "#{} - {}".format(v, k), fill='black', font=font_)
 
 	current_height += line_height
 
