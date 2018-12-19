@@ -13,7 +13,7 @@ font_size_ = font_.getsize('base0F')
 text_offset = (line_height - font_size_[1]) / 2
 
 img_height_ = 16 * line_height
-img_width_ = padding_left + padding_right + box_width + font_size_[0]
+img_width_ = padding_left + padding_right + box_width + font_size_[0] + padding_right
 
 img = Image.new(mode='RGB',
                 size=(img_width_, img_height_),
